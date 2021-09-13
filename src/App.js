@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Pokemon from "./components/Pokemon";
 import Search from "./components/Search";
+import FavoriteList from "./components/FavoriteList";
 
 const App = () => {
   const [pokemon, setPokemon] = useState("bulbasaur");
@@ -52,6 +53,7 @@ const App = () => {
       </header>
       <Search handleChange = {handleChange} handleSubmit = {handleSubmit}/>
       <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2}/> 
+      <FavoriteList />
     </div>
   );
 }
