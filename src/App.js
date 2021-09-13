@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Pokemon from "./components/Pokemon";
+import Search from "./components/Search";
 
 const App = () => {
   const [pokemon, setPokemon] = useState("bulbasaur");
@@ -49,14 +50,12 @@ const App = () => {
       <header className="App-header">
         <h1>Pokémon Viewer</h1>
       </header>
-      <form onSubmit = {handleSubmit}>
-        <label>
-          <input type="text" onChange = {handleChange} placeholder="Type a Pokémon..."/>
-        </label>
-      </form>
+      <Search handleChange = {handleChange} handleSubmit = {handleSubmit}/>
       <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2}/> 
     </div>
   );
 }
 
 export default App;
+
+//git push heroku main to send to heroku
