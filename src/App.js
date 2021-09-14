@@ -68,15 +68,19 @@ const App = () => {
     setPokemonList(copy);
 
   }
-  
+  const removePokemon = (pokemonName) => {
+    // let copy = pokemonList.filter((item) => item)
+    console.log(pokemonName)
+
+  }
   return (
     <div className="App">
       <header className="App-header">
         <h1>Pokémon Viewer</h1>
       </header>
       <Search handleChange = {handleChange} handleSubmit = {handleSubmit}/>
-      <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon}/> 
-      <FavoriteList pokemonList = {pokemonList} handleToggle={handleToggle} handleFilter={handleFilter} pokemonName = {pokemonName}/>
+      <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon} /> 
+      <FavoriteList pokemonList = {pokemonList} handleToggle={handleToggle} handleFilter={handleFilter} pokemonName = {pokemonName} removePokemon = {removePokemon}/>
     </div>
   );
 }
