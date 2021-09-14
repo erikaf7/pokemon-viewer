@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Pokemon from "./components/Pokemon";
 import Search from "./components/Search";
@@ -12,7 +12,7 @@ const App = () => {
   const [pokemonName, setPokemonName] = useState("bulbasaur");
   const [pokemonType, setPokemonType] = useState("grass");
   const [pokemonType2, setPokemonType2] = useState("poison");
-
+  const [pokemonList, setPokemonList] = useState([]);
 
   const getPokemon = async () => {
     const toArray = [];
@@ -46,14 +46,35 @@ const App = () => {
     getPokemon()
   }
 
+  const handleToggle = () => {
+    let mapped = pokemonList.map(name => {
+      return name === pokemonName ? {...name, notFavorite: !name.notFavorite } : { ...name};
+    })
+    setPokemonList(mapped);
+
+  }
+
+  const handleFilter = () => {
+    let filtered = setPokemonList.filter(name => {
+      return !name.notFavorite;
+    })
+    setPokemonList(filtered)
+  }
+
+  const addPokemon = (pokemonName) => {
+    let copy = [...FavoriteList];
+    copy = [...copy, { name: pokemonName, notFavorite: false}];
+    setPokemonList(copy);
+
+  }
   return (
     <div className="App">
       <header className="App-header">
         <h1>Pokémon Viewer</h1>
       </header>
       <Search handleChange = {handleChange} handleSubmit = {handleSubmit}/>
-      <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2}/> 
-      <FavoriteList />
+      <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon}/> 
+      <FavoriteList pokemonList = {pokemonList} handleToggle={handleToggle} handleFilter={handleFilter}/>
     </div>
   );
 }

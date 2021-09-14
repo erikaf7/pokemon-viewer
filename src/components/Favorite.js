@@ -4,7 +4,7 @@ const Favorite = (props)=>{
 
         return( 
             <div>
-                <button>Favorite</button>
+                <button onClick = {props.addPokemon}>Favorite</button>
                 <p>{props.pokemonName}</p>
             </div>
             
