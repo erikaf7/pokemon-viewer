@@ -1,12 +1,17 @@
 import React from 'react'
 
 const FavoriteListItem = (props)=>{
+    let removePokemon = props.removePokemon
 
-    
-    let thisPokemonName = props.pokemonName
+    const handleClick = (e) => {
+        e.preventDefault();
+        removePokemon(props.item.id);
+
+    }
+
         return( 
             <div>
-                <p>{props.pokemonName}</p> <button onClick = {props.removePokemon}>Remove</button>
+                <p id={props.item.id} key ={props.item.id}>{props.item.name} {props.item.id}</p> <button onClick = {handleClick}>Remove</button>
             </div>
             
         )

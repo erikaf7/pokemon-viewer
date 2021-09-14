@@ -64,13 +64,13 @@ const App = () => {
 
   const addPokemon = (pokemonName) => {
     let copy = [...pokemonList];
-    copy = [...copy, { name: pokemonName, notFavorite: false}];
+    copy = [...copy, {id: pokemonList.length +1, name: pokemonName, notFavorite: false}];
     setPokemonList(copy);
 
   }
-  const removePokemon = (pokemonName) => {
+  const removePokemon = (id) => {
     // let copy = pokemonList.filter((item) => item)
-    console.log(pokemonName)
+    console.log(id)
 
   }
   return (

@@ -13,7 +13,6 @@ const Favorite = (props)=>{
         return( 
             <div>
                 <button onClick = {handleClick}>Favorite</button>
-                <p>{props.pokemonName}</p>
             </div>
             
         )
