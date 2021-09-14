@@ -20,6 +20,13 @@ h2 {
   background-color: #172A3A;
   color: #C4C4C4;
 }
+
+.footer-text {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #172A3A;
+
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

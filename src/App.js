@@ -47,13 +47,7 @@ const App = () => {
     getPokemon()
   }
 
-  const handleToggle = () => {
-    let mapped = pokemonList.map(name => {
-      return name === pokemonName ? {...name, notFavorite: !name.notFavorite } : { ...name};
-    })
-    setPokemonList(mapped);
 
-  }
 
   const handleFilter = () => {
     let filtered = setPokemonList.filter(name => {
@@ -64,7 +58,7 @@ const App = () => {
 
   const addPokemon = (pokemonName) => {
     let copy = [...pokemonList];
-    copy = [...copy, {id: pokemonList.length +1, name: pokemonName, notFavorite: false}];
+    copy = [...copy, {id: pokemonList.length +1, name: pokemonName}];
     setPokemonList(copy);
 
   }
@@ -81,7 +75,10 @@ const App = () => {
       </header>
       <Search handleChange = {handleChange} handleSubmit = {handleSubmit}/>
       <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon} /> 
-      <FavoriteList pokemonList = {pokemonList} handleToggle={handleToggle} handleFilter={handleFilter} pokemonName = {pokemonName} removePokemon = {removePokemon}/>
+      <FavoriteList pokemonList = {pokemonList} handleFilter={handleFilter} pokemonName = {pokemonName} removePokemon = {removePokemon}/>
+      <footer>
+        <p className="footer-text">Pokémon and Pokémon character names are trademarks of Nintendo.</p>
+      </footer>
     </div>
   );
 }
