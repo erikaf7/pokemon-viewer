@@ -69,7 +69,8 @@ const App = () => {
 
   }
   const removePokemon = (id) => {
-    // let copy = pokemonList.filter((item) => item)
+    let copy = pokemonList.filter((item) => item.id !== id);
+    setPokemonList(copy);
     console.log(id)
 
   }
@@ -88,3 +89,13 @@ const App = () => {
 export default App;
 
 //git push heroku main to send to heroku
+
+/*
+sources:
+
+removing items from list - https://www.robinwieruch.de/react-remove-item-from-list
+
+using ajax and api - https://www.youtube.com/watch?v=cNmn72kiZWU
+
+*/
+

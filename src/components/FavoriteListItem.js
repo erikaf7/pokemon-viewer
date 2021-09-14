@@ -11,7 +11,7 @@ const FavoriteListItem = (props)=>{
 
         return( 
             <div>
-                <p id={props.item.id} key ={props.item.id}>{props.item.name} {props.item.id}</p> <button onClick = {handleClick}>Remove</button>
+                <p id={props.item.id} key ={props.item.id}>{props.item.name}</p> <button onClick = {handleClick}>Remove</button>
             </div>
             
         )
