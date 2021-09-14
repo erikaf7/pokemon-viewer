@@ -8,7 +8,7 @@ const FavoriteList = (props)=>{
                 <h2>Favorites</h2>
                 {props.pokemonList.map (poke =>{
                 return (
-                    <FavoriteListItem poke = {poke} handleToggle={props.handleToggle} handleFilter={props.handleFilter} />
+                    <FavoriteListItem poke = {poke} handleToggle={props.handleToggle} handleFilter={props.handleFilter} pokemonName={props.pokemonName}/>
                 )
             })}
             </div>

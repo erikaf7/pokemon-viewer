@@ -5,7 +5,6 @@ import Search from "./components/Search";
 import FavoriteList from "./components/FavoriteList";
 
 
-
 const App = () => {
   const [pokemon, setPokemon] = useState("bulbasaur");
   const [pokemonData, setPokemonData] = useState([]);
@@ -69,6 +68,7 @@ const App = () => {
     setPokemonList(copy);
 
   }
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -76,7 +76,7 @@ const App = () => {
       </header>
       <Search handleChange = {handleChange} handleSubmit = {handleSubmit}/>
       <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon}/> 
-      <FavoriteList pokemonList = {pokemonList} handleToggle={handleToggle} handleFilter={handleFilter}/>
+      <FavoriteList pokemonList = {pokemonList} handleToggle={handleToggle} handleFilter={handleFilter} pokemonName = {pokemonName}/>
     </div>
   );
 }
