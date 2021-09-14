@@ -9,7 +9,7 @@ const Pokemon = (props)=>{
              <p>ID - {props.pokemonID}</p>
             <p>Name - {props.pokemonName}</p>
             <p>Type - {props.pokemonType} {props.pokemonType2}</p>
-            <Favorite pokemonName= {props.pokemonName} />
+            <Favorite pokemonName= {props.pokemonName}  addPokemon = {props.addPokemon}/>
           </div>
         )
       

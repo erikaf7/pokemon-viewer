@@ -4,6 +4,8 @@ import Pokemon from "./components/Pokemon";
 import Search from "./components/Search";
 import FavoriteList from "./components/FavoriteList";
 
+
+
 const App = () => {
   const [pokemon, setPokemon] = useState("bulbasaur");
   const [pokemonData, setPokemonData] = useState([]);
@@ -62,7 +64,7 @@ const App = () => {
   }
 
   const addPokemon = (pokemonName) => {
-    let copy = [...FavoriteList];
+    let copy = [...pokemonList];
     copy = [...copy, { name: pokemonName, notFavorite: false}];
     setPokemonList(copy);
 
