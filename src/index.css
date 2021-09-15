@@ -13,7 +13,7 @@ body {
   display: grid;
   margin: 20px auto;
   grid-template-columns: 1fr 1.5fr ;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: .5fr 1fr;
   grid-gap: 10px;
   width: 70%;
   height: 70%;
@@ -23,6 +23,11 @@ body {
 .search-bar {
   grid-row: 1/2;
   grid-column: 2/4;
+
+  text-align: center;
+
+
+  
 }
 .search-box {
   width: 70%;
@@ -34,6 +39,9 @@ body {
 .pokemon {
   grid-row: 2/4;
   grid-column: 2/4;
+  text-align: center;
+  background-color: #C4C4C4;
+  padding-bottom: 3%;
 }
 
 .favorites {
