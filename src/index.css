@@ -9,16 +9,47 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #99C1B9;
 }
+.container{
+  display: grid;
+  margin: 20px auto;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  width: 70%;
+  height: 70%;
+  background-color: #77A69C;
+}
+
+.search-bar {
+  grid-row: 1/2;
+  grid-column: 2/4;
+}
+
+.pokemon {
+  grid-row: 2/4;
+  grid-column: 2/4;
+}
+
+.favorites {
+  grid-row: 1/4;
+}
 h1 {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   color: #172A3A;
 }
 
-h2 {
+.favorites-h2 {
   font-family: 'Open Sans', sans-serif;
   background-color: #172A3A;
   color: #C4C4C4;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #172A3A;
 }
 
 .footer-text {
@@ -31,3 +62,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .container{
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto;
+  width: 80%;
+  height: 80%;
+  background-color: #77A69C;
+}
+
+.search-bar {
+  width: 40%;
+}
+
+.pokemon {
+  width: 50%; */

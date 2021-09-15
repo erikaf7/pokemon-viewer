@@ -4,7 +4,7 @@ import Favorite from './Favorite'
 const Pokemon = (props)=>{
 
         return( 
-            <div className="container">
+            <div className="pokemon">
             <img src = {props.pokemonImg} alt={props.pokemonName} />
              <p>ID - {props.pokemonID}</p>
             <p>Name - {props.pokemonName}</p>

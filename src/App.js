@@ -73,9 +73,11 @@ const App = () => {
       <header className="App-header">
         <h1>Pokémon Viewer</h1>
       </header>
-      <Search handleChange = {handleChange} handleSubmit = {handleSubmit}/>
-      <Pokemon pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon} /> 
-      <FavoriteList pokemonList = {pokemonList} handleFilter={handleFilter} pokemonName = {pokemonName} removePokemon = {removePokemon}/>
+      <div className="container">
+      <Search  handleChange = {handleChange} handleSubmit = {handleSubmit}/>
+      <Pokemon className="pokemon" pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon} /> 
+      <FavoriteList className="favorites"  pokemonList = {pokemonList} handleFilter={handleFilter} pokemonName = {pokemonName} removePokemon = {removePokemon}/>
+      </div>
       <footer>
         <p className="footer-text">Pokémon and Pokémon character names are trademarks of Nintendo.</p>
       </footer>
