@@ -6,9 +6,9 @@ const Search = (props)=>{
           <div className="search-bar">
           <form onSubmit = {props.handleSubmit}>
             <label>
-              <input type="text" onChange = {props.handleChange} placeholder="Type a Pokémon..."/>
+              <input className="search-box" type="text" onChange = {props.handleChange} placeholder="Type a Pokémon..."/>
             </label>
-            <button onClick = {props.handleSubmit}>Search</button>
+            <button className="submit" onClick = {props.handleSubmit}>Search</button>
           </form>
           </div>
         )

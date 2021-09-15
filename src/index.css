@@ -12,19 +12,25 @@ body {
 .container{
   display: grid;
   margin: 20px auto;
-  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr ;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 10px;
   width: 70%;
   height: 70%;
-  background-color: #77A69C;
+  background-color: #99C1B9;
 }
 
 .search-bar {
   grid-row: 1/2;
   grid-column: 2/4;
 }
+.search-box {
+  width: 70%;
+}
 
+.submit {
+  width: 20%;
+}
 .pokemon {
   grid-row: 2/4;
   grid-column: 2/4;
@@ -32,6 +38,9 @@ body {
 
 .favorites {
   grid-row: 1/4;
+  grid-column: 1/2;
+  background-color: #77A69C;
+  text-align: center
 }
 h1 {
   font-family: 'Poppins', sans-serif;
