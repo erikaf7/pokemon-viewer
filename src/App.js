@@ -48,14 +48,6 @@ const App = () => {
   }
 
 
-
-  const handleFilter = () => {
-    let filtered = setPokemonList.filter(name => {
-      return !name.notFavorite;
-    })
-    setPokemonList(filtered)
-  }
-
   const addPokemon = (pokemonName) => {
     let copy = [...pokemonList];
     copy = [...copy, {id: pokemonList.length +1, name: pokemonName}];
@@ -76,7 +68,7 @@ const App = () => {
       <div className="container">
       <Search  handleChange = {handleChange} handleSubmit = {handleSubmit}/>
       <Pokemon className="pokemon" pokemonData = {pokemonData} pokemonImg = {pokemonImg}pokemonID = {pokemonID} pokemonName= {pokemonName} pokemonType =  {pokemonType} pokemonType2 = {pokemonType2} addPokemon = {addPokemon} /> 
-      <FavoriteList className="favorites"  pokemonList = {pokemonList} handleFilter={handleFilter} pokemonName = {pokemonName} removePokemon = {removePokemon}/>
+      <FavoriteList className="favorites"  pokemonList = {pokemonList}  pokemonName = {pokemonName} removePokemon = {removePokemon}/>
       </div>
       <footer>
         <p className="footer-text">Pokémon and Pokémon character names are trademarks of Nintendo.</p>
@@ -87,7 +79,7 @@ const App = () => {
 
 export default App;
 
-//git push heroku main to send to heroku
+
 
 /*
 sources:

@@ -13,6 +13,7 @@ const Favorite = (props)=>{
         return( 
             <div>
                 <button onClick = {handleClick}>Favorite</button>
+
             </div>
             
         )
